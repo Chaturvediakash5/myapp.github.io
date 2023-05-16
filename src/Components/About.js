@@ -67,9 +67,9 @@ const toogleStyle=()=>{
         </div>
     </div>
     </div>
-    <div className="container my-3">
+    {/*<div className="container my-3">
     <button type="button" className="btn btn-primary " onClick={toogleStyle}>{btnText}</button>
-    </div>
+  </div>*/}
     
         </div>
   )

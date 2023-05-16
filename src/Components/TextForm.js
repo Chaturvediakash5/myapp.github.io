@@ -45,27 +45,27 @@ export default function TextForm(props) {
         color:props.mode === 'dark'?'white':'black'}} id="myBox" onChange={handleOnchange} rows="8" ></textarea>
         </div>
         <br />
-        <button className="btn btn-primary mx-2" onClick={handleUpclick}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleUpclick}>
           Convert to Upper Case
         </button>
 
-        <button className="btn btn-primary mx-2" onClick={handleLoclick}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleLoclick}>
           Convert to Lower Case
         </button>
-        <button className="btn btn-primary mx-2" onClick={clearText}>
+        <button className="btn btn-primary mx-2 my-1" onClick={clearText}>
           Clear
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleCopy}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleCopy}>
           Copy Text
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleExtraSpaces}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleExtraSpaces}>
           Remove Extra Spaces
         </button>
       </div>
       <div className="container my-3" style={{color:props.mode==='dark'?'white':'#042743'}}>
         <h2>Your Text Summary</h2>
         <p>
-          Hi above Paragraph has {text.split(" ").length} Words and{" "}
+          Hi above Paragraph has {text.split(" ").filter((element)=>{ return element.length!==0 }).length} Words and{" "}
           {text.length} Characters
         </p>
         <p>
